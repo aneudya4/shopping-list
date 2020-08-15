@@ -13,7 +13,6 @@ function handdleShoppingList() {
     e.preventDefault();
 
     const input = $('form input');
-    // value entered by user
     if (!input.val()) {
       // if input was empty  alert the user
       alert('Your input was empty');
