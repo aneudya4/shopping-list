@@ -1,12 +1,12 @@
-function handleForm() {
+function handdleShoppingList() {
   const form = $('form');
   const controlsDiv = `<div class="shopping-item-controls">
-<button class="shopping-item-toggle">
-  <span class="button-label">check</span>
+  <button class="shopping-item-toggle">
+    <span class="button-label">check</span>
   </button>
-  <button class='shopping-item-delete'>
-<span class='button-label'>delete</span>
-</button>
+  <button class="shopping-item-delete">
+    <span class="button-label">delete</span>
+  </button>
 </div>`;
 
   form.submit((e) => {
@@ -36,16 +36,13 @@ function handleForm() {
 
   $('ul').on('click', 'button.shopping-item-toggle', function () {
     const item = $(this).closest('li').find('span.shopping-item');
-    const buttonSpan = $(this).find('span.button-label')[0];
 
     if (!item.hasClass('shopping-item__checked')) {
       item.toggleClass('shopping-item__checked ');
-      $(buttonSpan).text('unchecked');
     } else {
       item.toggleClass('shopping-item__checked ');
-      $(buttonSpan).text('checked');
     }
   });
 }
 
-$(handleForm);
+$(handdleShoppingList);
