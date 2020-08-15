@@ -29,19 +29,14 @@ function handdleShoppingList() {
     }
   });
 
-  $('ul').on('click', 'button.shopping-item-delete', function () {
+  $('ul').on('click', 'button.shopping-item-delete', function (event) {
     $(this).closest('li').remove();
     // removes li
   });
 
-  $('ul').on('click', 'button.shopping-item-toggle', function () {
+  $('ul').on('click', 'button.shopping-item-toggle', function (event) {
     const item = $(this).closest('li').find('span.shopping-item');
-
-    if (!item.hasClass('shopping-item__checked')) {
-      item.toggleClass('shopping-item__checked ');
-    } else {
-      item.toggleClass('shopping-item__checked ');
-    }
+    item.toggleClass('shopping-item__checked ');
   });
 }
 
